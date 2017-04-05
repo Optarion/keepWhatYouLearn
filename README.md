@@ -8,7 +8,7 @@ A reminder of what I've learned and will surely forgot
 
 ## Summary
  * [Javascript](#javascript)
-  * [Console](#javascript-console)
+  * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
 * [Tools](#tools)
  * [Chrome Dev Tools](#chrome-dev-tool)
@@ -50,11 +50,13 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 #### Miscellaneous
 - Shortcut to open/close Chrome Dev Tools: Cmd + Alt + I
 
-<a id="chrome-dev-tool-console"></a>
-### Console
+<a id="chrome-dev-tool-debugger"></a>
+#### Debugger
 - $('expression') selects all page elements that matche 'expression' (like in jQuery). The output is slightly different than jQuery's $('') and jQuery overrides chrome dev tools' behaviour.
 - `$0` will select the last element you've inspected. `$1` highlights the second-to-last and so on.
 - `inspect($('expression'))` will inspect the element that matches 'expression'. 
+- 'Pause on Exceptions' button (rounded shape with two || inside the debugger panel) can be used to block script when an exception appears.
+- LocalStorage data can be edited inside the *Application/Storage/LocalStorage* list.
 
 <a id="chrome-dev-tool-memory"></a>
 #### Memory Management
