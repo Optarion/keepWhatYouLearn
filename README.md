@@ -44,7 +44,7 @@ A reminder of what I've learned and will surely forgot
 
 <a id="chrome-dev-tool"></a>
 ### Chrome Dev Tools (v.56.0.2924.87)
-Stuff Learned from [discover-devtools.codeschool.com]
+Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
