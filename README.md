@@ -4,8 +4,9 @@ A reminder of what I've learned and will surely forgot
 ## Tasks List
 - [ ] Add Markdown Infos (Regular&GitHub's ?)
 
+----------------
 
-
+## Summary
  * [Javascript](#javascript)
   * [Console](#javascript-console)
   * [Garbage Collection](#javascript-garbage-collection)
