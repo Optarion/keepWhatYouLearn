@@ -67,7 +67,7 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
-- Shortcut to open/close Chrome Dev Tools: Cmd + Alt + I
+- Shortcut to open/close Chrome Dev Tools: Cmd(⌘) + Alt(⌥) + I
 
 <a id="chrome-dev-tool-debugger"></a>
 #### Debugger
