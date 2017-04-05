@@ -10,6 +10,8 @@ A reminder of what I've learned and will surely forgot
  * [Javascript](#javascript)
   * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
+ * [SPIP](#spip)
+  * [Boucles](#spip-boucles)
 * [Tools](#tools)
  * [Chrome Dev Tools](#chrome-dev-tool)
   * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -37,8 +39,25 @@ A reminder of what I've learned and will surely forgot
  window.addEventListener('click', function(e){
   
  })
- ``` 
+ ```
+ 
+<a id="spip"></a>
+## SPIP
 
+<a id="spip-boucles"></a>
+### Boucles
+- To get the siblings of a section/article, you have to use `{meme_parent}` as criteria of a loop. But this loop has to be inside a first loop that check the current section/article
+```spip
+<BOUCLE_siblings(RUBRIQUES){meme_parent}>
+	//Result: NULL because #ID_RUBRIQUE (the idea of the current section)
+</BOUCLE_siblings>
+
+<BOUCLE_current(RUBRIQUES){id_rubrique}>
+	<BOUCLE_siblings(RUBRIQUES){meme_parent}>
+		//Result: List of siblings of current section
+	</BOUCLE_siblings>
+</BOUCLE_current>
+```
 <a id="tools"></a>
 ## Tools
 
