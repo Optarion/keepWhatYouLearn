@@ -7,16 +7,16 @@ A reminder of what I've learned and will surely forgot
 ----------------
 
 ## Summary
- * [Javascript](#javascript)
+* [Javascript](#javascript)
   * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
- * [SPIP](#spip)
+* [SPIP](#spip)
   * [Boucles](#spip-boucles)
 * [Tools](#tools)
- * [Chrome Dev Tools](#chrome-dev-tool)
-  * [Miscellaneous](#chrome-dev-tool-miscellaneous)
-  * [Console](#chrome-dev-tool-console)
-  * [Memory Management](#chrome-dev-tool-memory)
+  * [Chrome Dev Tools](#chrome-dev-tool)
+    * [Miscellaneous](#chrome-dev-tool-miscellaneous)
+    * [Console](#chrome-dev-tool-console)
+    * [Memory Management](#chrome-dev-tool-memory)
 
 
 <a id="javascript"></a>
