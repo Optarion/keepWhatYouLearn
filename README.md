@@ -2,7 +2,7 @@
 A reminder of what I've learned and will surely forgot
 
 ## Tasks List
-[] Add Markdown Infos (Regular&GitHub's ?)
+- [ ] Add Markdown Infos (Regular&GitHub's ?)
 
 
 
