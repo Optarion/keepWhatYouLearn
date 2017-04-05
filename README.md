@@ -13,6 +13,7 @@ A reminder of what I've learned and will surely forgot
 * [Tools](#tools)
  * [Chrome Dev Tools](#chrome-dev-tool)
   * [Miscellaneous](#chrome-dev-tool-miscellaneous)
+  * [Console](#chrome-dev-tool-console)
   * [Memory Management](#chrome-dev-tool-memory)
 
 
@@ -42,12 +43,18 @@ A reminder of what I've learned and will surely forgot
 ## Tools
 
 <a id="chrome-dev-tool"></a>
-### Chrome Dev Tools
+### Chrome Dev Tools (v.56.0.2924.87)
 Stuff Learned from [discover-devtools.codeschool.com]
 
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
 - Shortcut to open/close Chrome Dev Tools: Cmd + Alt + I
+
+<a id="chrome-dev-tool-console"></a>
+### Console
+- $('expression') selects all page elements that matche 'expression' (like in jQuery). The output is slightly different than jQuery's $('') and jQuery overrides chrome dev tools' behaviour.
+- `$0` will select the last element you've inspected. `$1` highlights the second-to-last and so on.
+- `inspect($('expression'))` will inspect the element that matches 'expression'. 
 
 <a id="chrome-dev-tool-memory"></a>
 #### Memory Management
