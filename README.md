@@ -68,6 +68,7 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
 - Shortcut to open/close Chrome Dev Tools: Cmd(⌘) + Alt(⌥) + I
+- You can see/delete page cookies in *Application/Storage/Cookies*
 
 <a id="chrome-dev-tool-debugger"></a>
 #### Debugger
