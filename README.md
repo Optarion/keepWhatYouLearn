@@ -12,6 +12,8 @@ A reminder of what I've learned and will surely forgot
   * [Garbage Collection](#javascript-garbage-collection)
 * [SPIP](#spip)
   * [Boucles](#spip-boucles)
+* [Git](#git)
+	* [Undo stuff](#git-reset)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -57,6 +59,28 @@ A reminder of what I've learned and will surely forgot
 		//Result: List of siblings of current section
 	</BOUCLE_siblings>
 </BOUCLE_current>
+```
+<a id="git"></a>
+## Git
+
+ALWAYS BEWARE OF `--hard` !
+
+<a id="git-reset"></a>
+### Undo stuff
+- Reset a rebase
+To reset a rebase on a current branch, use `reflog` to find the head of the current branch right before the rebase. Then `git reset --hard` to it.
+
+```
+git reflog
+dadb174 HEAD@{1}: rebase finished: returning to refs/heads/dev
+dadb174 HEAD@{2}: rebase: #2139 @1h : Remove rubrique-project hardocode by real articles list
+758481d HEAD@{3}: pull --rebase -v: checkout 758481d9ec15dce1eded33299534082b08a53a33
+fd5c427 HEAD@{4}: commit: #2139 @1h : Remove rubrique-project hardocode by real articles list
+c1ad5a2 HEAD@{5}: commit: #2139 @0.5h : Factorize projects-grid-row files + Update their classes + Delete useless files
+
+The HEAD before the rebase was HEAD@{4} then just
+
+git reset --hard HEAD@{4}
 ```
 <a id="tools"></a>
 ## Tools
