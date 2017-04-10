@@ -35,12 +35,17 @@ A reminder of what I've learned and will surely forgot
 ### Garbage Collection
  - If a variable is instanciated outside a Listener, that Listener uses in anyway (like checking it's type/value/...) and then makes that this variable is not usefull anymore (like this variable content was injected in the DOM but the Listener changes the DOM again), the variable won't be able to be garbage collected as it should because the reference of this variable still exists into the Listener.
  **TODO : Check veracity of what I'm talking about**
- **TODO : Update code example**
+
  ```javascript
- var input = '<input id="newInput"/>';
+ var input = $('<input id="newInput"/>'); //New DOM object
+ $('form').html(input);
  window.addEventListener('click', function(e){
-  
- })
+ 	if(!input.hidden){ //Reference of the DOM object
+		$('form').html('<a href="">...</a>'); //Change DOM
+	}
+ });
+//The input object is no longer into the DOM but its reference inside a listener attached to the window make it enable to be garbage collected
+
  ```
  
 <a id="spip"></a>
