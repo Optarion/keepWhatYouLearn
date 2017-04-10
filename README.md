@@ -19,6 +19,8 @@ A reminder of what I've learned and will surely forgot
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
     * [Console](#chrome-dev-tool-console)
     * [Memory Management](#chrome-dev-tool-memory)
+* [SEO](#seo)
+	* [Microdata](#seo-microdata)
 
 
 <a id="javascript"></a>
@@ -112,3 +114,42 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 - Heap Snapshots
  You can take Heap Snapshots to see every objects loaded into a page. Then you can take an other one after making some interations in the page and use "Comparison" to see difference between the two collections.
  After that, red "Detached DOM tree" show us wich html elements haven't been garbage collected (i.e. the memory used for the element is still used although the element doesn't exists anymore).
+ 
+ <a href="seo"></a>
+ ## SEO
+
+<a href="seo-microdata"></a>
+### Microdata
+- Google Knowledge Graph https://developers.google.com/search/docs/data-types/sitename
+Used to display a chosen name & logo in google search results + tell Google wich social media pages are linked to the website.
+:warning: Use absolute url for page & img references
+
+```javascript
+<!-- Knowledge Graph Google -->
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"name": "Website's name",
+	"url": "Website's URL"
+}
+</script>
+<script type="application/ld+json">
+{ 
+	"@context" : "http://schema.org",
+	"@type" : "Organization",
+	"name": "Organization's name",
+	"url": "Organization website URL",
+	"logo": "Organization's logo",
+	"sameAs" : [ 
+		"https://www.facebook.com/YourPage/",
+		"https://www.linkedin.com/company/YourOrganization",
+		"https://twitter.com/yourAccount",
+		...
+	] 
+}
+</script>
+<!-- End Knowledge Graph Google -->
+
+```
+
