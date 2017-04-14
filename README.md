@@ -14,6 +14,7 @@ A reminder of what I've learned and will surely forgot
   * [Boucles](#spip-boucles)
 * [Git](#git)
 	* [Undo stuff](#git-reset)
+	* [Rename stuff](#git-rename)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -88,6 +89,13 @@ c1ad5a2 HEAD@{5}: commit: #2139 @0.5h : Factorize projects-grid-row files + Upda
 The HEAD before the rebase was HEAD@{4} then just
 
 git reset --hard HEAD@{4}
+```
+<a id="git-rename"></a>
+### Rename stuff
+- Rename a branch
+```
+git branch -m <old-name> <new-name> //If on another branch
+git branch -m <old-name> //If on the branch to rename
 ```
 <a id="tools"></a>
 ## Tools
