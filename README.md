@@ -22,6 +22,8 @@ A reminder of what I've learned and will surely forgot
     * [Memory Management](#chrome-dev-tool-memory)
 * [SEO](#seo)
 	* [Microdata](#seo-microdata)
+* [Others](#others)
+	* [MySQL](#others-mysql)
 
 
 <a id="javascript"></a>
@@ -160,4 +162,15 @@ Used to display a chosen name & logo in google search results + tell Google wich
 <!-- End Knowledge Graph Google -->
 
 ```
+<a id="others"></a>
+## Others
+<a id="others-mysql"></a>
+### MySQL
+* Solve local problem of ".pid file not found"
 
+It must be a permission issue
+```
+ls -laF /usr/local/var/mysql/ /usr/local/var/mysql/ //Check the ownership of mysql folder
+
+sudo chown -R mysql //Change owneship to mysql
+```
