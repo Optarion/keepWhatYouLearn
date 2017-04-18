@@ -78,6 +78,7 @@ ALWAYS BEWARE OF `--hard` !
 <a id="git-reset"></a>
 ### Undo stuff
 - Reset a rebase
+
 To reset a rebase on a current branch, use `reflog` to find the head of the current branch right before the rebase. Then `git reset --hard` to it.
 
 ```
@@ -95,6 +96,7 @@ git reset --hard HEAD@{4}
 <a id="git-rename"></a>
 ### Rename stuff
 - Rename a branch
+
 ```
 git branch -m <old-name> <new-name> //If on another branch
 git branch -m <old-name> //If on the branch to rename
@@ -113,15 +115,16 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 
 <a id="chrome-dev-tool-debugger"></a>
 #### Debugger
-- $('expression') selects all page elements that matche 'expression' (like in jQuery). The output is slightly different than jQuery's $('') and jQuery overrides chrome dev tools' behaviour.
-- `$0` will select the last element you've inspected. `$1` highlights the second-to-last and so on.
-- `inspect($('expression'))` will inspect the element that matches 'expression'. 
-- 'Pause on Exceptions' button (rounded shape with two || inside the debugger panel) can be used to block script when an exception appears.
-- LocalStorage data can be edited inside the *Application/Storage/LocalStorage* list.
+* $('expression') selects all page elements that matche 'expression' (like in jQuery). The output is slightly different than jQuery's $('') and jQuery overrides chrome dev tools' behaviour.
+* `$0` will select the last element you've inspected. `$1` highlights the second-to-last and so on.
+* `inspect($('expression'))` will inspect the element that matches 'expression'. 
+* 'Pause on Exceptions' button (rounded shape with two || inside the debugger panel) can be used to block script when an exception appears.
+* LocalStorage data can be edited inside the *Application/Storage/LocalStorage* list.
 
 <a id="chrome-dev-tool-memory"></a>
 #### Memory Management
-- Heap Snapshots
+* Heap Snapshots
+
  You can take Heap Snapshots to see every objects loaded into a page. Then you can take an other one after making some interations in the page and use "Comparison" to see difference between the two collections.
  After that, red "Detached DOM tree" show us wich html elements haven't been garbage collected (i.e. the memory used for the element is still used although the element doesn't exists anymore).
  
@@ -131,6 +134,7 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 <a href="seo-microdata"></a>
 ### Microdata
 - Google Knowledge Graph https://developers.google.com/search/docs/data-types/sitename
+
 Used to display a chosen name & logo in google search results + tell Google wich social media pages are linked to the website.
 :warning: Use absolute url for page & img references
 
