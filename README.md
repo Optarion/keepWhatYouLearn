@@ -13,6 +13,7 @@ A reminder of what I've learned and will surely forgot
 * [SPIP](#spip)
   * [Boucles](#spip-boucles)
 * [Git](#git)
+	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
 	* [Rename stuff](#git-rename)
 * [Tools](#tools)
@@ -73,7 +74,38 @@ A reminder of what I've learned and will surely forgot
 <a id="git"></a>
 ## Git
 
-ALWAYS BEWARE OF `--hard` !
+:warning: ALWAYS BEWARE OF `--hard` !
+
+<a id="git-check"></a>
+### Check stuff
+- See what is going to be pushed
+
+```
+git diff --stat --cached origin/master
+// Output ex : article.html++++----
+
+git diff origin/dev // Diff between local files pushed and remote files
+// Output ex : 
+<a href="#URL_SITE_SPIP" title="Aller à l'accueil"><span>#GET{titre}</span>
+	<svg version="1.1" class="panda original pink" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" xml:space="preserve">
+	   <polygon class="ctr" points="0,0 0,600 200,800 200,700 600,700 600,800 800,600 800,0" />
+-                          <path class="org" class="or" d="M0,0 0,200 200,0 z" />
+-                          <path class="ord" class="or" d="M800,0 800,200 600,0 z" />
++                          <path class="org or" d="M0,0 0,200 200,0 z" />
++                          <path class="ord or" d="M800,0 800,200 600,0 z" />
+	   <path class="nz" d="M300,400 500,400 400,500 z" />
+	   <path class="bo" d="M300,500 500,500 400,600 z" />
+-                          <polygon class="og" class="oy" points="400,200 200,200 100,300 100,400 200,500 200,400" />
+-                          <polygon class="od" class="oy" points="400,200 600,200 700,300 700,400 600,500 600,400" />
++                          <polygon class="og oy" points="400,200 200,200 100,300 100,400 200,500 200,400" />
++                          <polygon class="od oy" points="400,200 600,200 700,300 700,400 600,500 600,400" />
+	   <circle cx="200" cy="300" r="25" />
+	   <circle cx="600" cy="300" r="25" />
+	</svg>
+</a>
+-       </li>
+ ]
+```
 
 <a id="git-reset"></a>
 ### Undo stuff
