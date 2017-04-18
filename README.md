@@ -125,6 +125,15 @@ The HEAD before the rebase was HEAD@{4} then just
 
 git reset --hard HEAD@{4}
 ```
+
+- Reset commits
+
+```
+git reset --hard 0d1d7fc32 // Reset all commits and file changes since 0d1d7fc32 :warning: Files modifications too !
+
+git reset --soft 0d1d7fc32 // Reset all commits but keep track of file modification. They can be committed again.
+```
+
 <a id="git-rename"></a>
 ### Rename stuff
 - Rename a branch
