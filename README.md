@@ -424,6 +424,22 @@ For facebook, we must get an `app_id` by creating a facebook app. More info http
 <meta property="article:published_time" content="2016-04-11T08:00:00+08:00" /> // W3C format
 ```
 
+- Favicon
+
+A favicon.ico must exists in the site's root directory because it's the one used for non HTML requests (ex: request to an image or en pdf).
+
+Link to the web favicon (16x16px)
+`<link rel="icon" href="http://www.xxx.fr/favicon.gif" type="image/gif">`
+
+Others favicons for apple devices
+```
+<link rel="apple-touch-icon" sizes="76x76" href="{76x76 icon URL}">
+<link rel="apple-touch-icon" sizes="120x120" href="{120x120 icon URL}">
+<link rel="apple-touch-icon" sizes="152x152" href="{152x152 icon URL}">
+<link rel="apple-touch-icon" sizes="167x167" href="{167x167 icon URL}">
+<link rel="apple-touch-icon" sizes="180x180" href="{180x180 icon URL}">
+```
+
 <a id="others"></a>
 ## Others
 <a id="others-mysql"></a>
