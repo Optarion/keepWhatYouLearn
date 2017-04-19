@@ -330,8 +330,38 @@ https://developers.google.com/search/docs/data-types/articles#amp-logo-guideline
      }
    }
 }
-
 ```
+- [Microformat Video](https://developers.google.com/search/docs/data-types/videos)
+
+This snippet comes in addition with NewsArticle Microformat when a video exists on the page.
+
+```javascript
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "{Video title}",
+  "description": "{Vide short descritpion}",
+  "thumbnailUrl": "{Video thumbnail URL}",
+  "uploadDate": "2015-02-05T08:00:00+08:00", // W3C format
+  "duration": "PT1M33S", // Video duration in ISO 8601 format
+  "publisher": {
+    "@type": "Organization",
+    "name": "{Organization name}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{Organization logo URL}",
+      "width": {Organization logo URL width}, // in pixels
+      "height": {Organization logo URL height} // in pixels
+    }
+  },
+  "contentUrl": "{Video URL}",
+  "embedUrl": "{Page URL}",
+  "interactionCount": "{Number of Views}"
+}
+</script>
+```
+
 
 <a id="others"></a>
 ## Others
