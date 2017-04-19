@@ -272,6 +272,18 @@ This snippet placed in the homepage's `head` forces google to use the website se
 
 To make sure google doesn't display any searchbox, insert `<meta name="google" content="nositelinkssearchbox" />` in `head`.
 
+- Microformat Site Navigation
+
+To control the links displayed on a Google search result page, we can use Microformat Site navigation on main navigation items.
+More info : https://schema.org/SiteNavigationElement
+
+```
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+  <li itemprop="name"><a itemprop="url" href="{url 1}">Link 1</a></li>
+  <li itemprop="name"><a itemprop="url" href="{url 2}">Link 2</a></li>
+  <li itemprop="name"><a itemprop="url" href="{url 3}">Link 3</a></li>
+</ul>
+```
 
 <a id="others"></a>
 ## Others
