@@ -12,6 +12,7 @@ A reminder of what I've learned and will surely forgot
   * [Garbage Collection](#javascript-garbage-collection)
 * [SPIP](#spip)
   * [Boucles](#spip-boucles)
+  * [Filtres](#spip-filtres)
 * [Git](#git)
 	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
@@ -71,6 +72,16 @@ A reminder of what I've learned and will surely forgot
 	</BOUCLE_siblings>
 </BOUCLE_current>
 ```
+
+<a id="spip-filtres"></a>
+### Filtres
+- Use `|debug` to display information before a value compiled by spip.
+```
+[(#ID_ARTICLE|debug{id_article})] // Output: 'id_article' = X (where X is the ID_ARTICLE)
+```
+
+
+
 <a id="git"></a>
 ## Git
 
