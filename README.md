@@ -174,11 +174,12 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 
 <a href="seo-microdata"></a>
 ### Microdata
-- Google Knowledge Graph https://developers.google.com/search/docs/data-types/sitename
-
-Used to display a chosen name & logo in google search results + tell Google wich social media pages are linked to the website.
 
 :warning: Use absolute url for page & img references.
+
+- [Google Knowledge Graph](https://developers.google.com/search/docs/data-types/sitename)
+
+Used to display a chosen name & logo in google search results + tell Google wich social media pages are linked to the website.
 
 ```javascript
 <!-- Knowledge Graph Google -->
@@ -186,17 +187,17 @@ Used to display a chosen name & logo in google search results + tell Google wich
 {
 	"@context": "http://schema.org",
 	"@type": "WebSite",
-	"name": "Website's name",
-	"url": "Website's URL"
+	"name": "{Website's name}",
+	"url": "{Website's URL}"
 }
 </script>
 <script type="application/ld+json">
 { 
 	"@context" : "http://schema.org",
 	"@type" : "Organization",
-	"name": "Organization's name",
-	"url": "Organization website URL",
-	"logo": "Organization's logo",
+	"name": "{Organization's name}",
+	"url": "{Organization website URL}",
+	"logo": "{Organization logo's URL}",
 	"sameAs" : [ 
 		"https://www.facebook.com/YourPage/",
 		"https://www.linkedin.com/company/YourOrganization",
@@ -224,8 +225,8 @@ Set in all pages but homepage, this snippet shows the breadcrumb of the current 
    "position": 1,
    "item":
    {
-    "@id": "URL Section1",
-    "name": "Name Section1"
+    "@id": "{URL Section1}",
+    "name": "{Name Section1}"
     }
   },
   {
@@ -233,8 +234,8 @@ Set in all pages but homepage, this snippet shows the breadcrumb of the current 
    "position": 2,
    "item":
    {
-    "@id": "URL Section2",
-    "name": "Name Section2"
+    "@id": "{URL Section2}",
+    "name": "{Name Section2}"
     }
   },
   ...,
@@ -243,14 +244,32 @@ Set in all pages but homepage, this snippet shows the breadcrumb of the current 
   "position": x,
   "item":
    {
-     "@id": "URL current page",
-     "name": "Name current page"
+     "@id": "{URL current page}",
+     "name": "{Name current page}"
    }
   }
  ]
 }
 </script>
 ```
+- [Google Site navigation](https://developers.google.com/search/docs/guides/enhance-site#troubleshooting_your_markup)
+
+This snippet placed in the homepage's `head` forces google to use the website search engine instead of default google search.
+
+```javascript
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "{Site URL}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{Site search page URL}?q={Placeholder for the google searchbar}",
+    "query-input": "required name={Same placeholder than before}"
+  }
+}
+```
+
 
 <a id="others"></a>
 ## Others
