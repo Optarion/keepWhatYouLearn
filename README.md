@@ -389,6 +389,41 @@ Validator : https://cards-dev.twitter.com/validator
 <meta name="twitter:url" content="{Page URL}" />
 ```
 
+- Opengraph
+
+Many social networks or sharing services uses opengraph to display informations from shared url. This snippet must exists on every pages but there is specific parts (see below).
+Validator : https://developers.facebook.com/tools/debug/
+
+For facebook, we must get an `app_id` by creating a facebook app. More info https://developers.facebook.com/docs/apps/register 
+
+```
+// Generic part
+<!-- Open Graph -->
+<meta property="fb:app_id" content="{Facebook App ID}/> 
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="{Site name}" />
+<meta property="og:url" content="{Page URL}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{Page title}" />
+<meta property="og:description" content="{Page or Site description}" />
+
+// If the page is a section or an article with a Main picture
+<meta property="og:image" content="{Main image URL}" /> // 1200x630px
+<meta property="og:image:width" content="{Main image width}" /> // 1200 or less
+<meta property="og:image:height" content="{Main image height}" /> // 630 or less
+
+// If the page has not a Main picture
+<meta property="og:image" content="{Default image URL}" // 1200x630px
+/>
+<meta property="og:image:width" content="{Default image width}" />
+<meta property="og:image:height" content="{Default image height}" />
+
+// If the page is an article 
+<meta property="article:publisher" content="{Facebook page URL}" />
+<meta property="article:section" content="{Parent section name}" />
+<meta property="article:published_time" content="2016-04-11T08:00:00+08:00" /> // W3C format
+```
+
 <a id="others"></a>
 ## Others
 <a id="others-mysql"></a>
