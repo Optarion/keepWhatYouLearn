@@ -177,7 +177,8 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 - Google Knowledge Graph https://developers.google.com/search/docs/data-types/sitename
 
 Used to display a chosen name & logo in google search results + tell Google wich social media pages are linked to the website.
-:warning: Use absolute url for page & img references
+
+:warning: Use absolute url for page & img references.
 
 ```javascript
 <!-- Knowledge Graph Google -->
@@ -205,8 +206,52 @@ Used to display a chosen name & logo in google search results + tell Google wich
 }
 </script>
 <!-- End Knowledge Graph Google -->
-
 ```
+
+- [Google Breadcrumb](https://developers.google.com/search/docs/data-types/breadcrumbs#guidelines)
+
+Set in all pages but homepage, this snippet shows the breadcrumb of the current page. It must shown a list of subnavigation items (i.e sections and subsections).
+
+```javascript
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item":
+   {
+    "@id": "URL Section1",
+    "name": "Name Section1"
+    }
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "item":
+   {
+    "@id": "URL Section2",
+    "name": "Name Section2"
+    }
+  },
+  ...,
+  {
+   "@type": "ListItem",
+  "position": x,
+  "item":
+   {
+     "@id": "URL current page",
+     "name": "Name current page"
+   }
+  }
+ ]
+}
+</script>
+```
+
 <a id="others"></a>
 ## Others
 <a id="others-mysql"></a>
