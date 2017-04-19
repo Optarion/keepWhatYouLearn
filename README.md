@@ -254,7 +254,7 @@ Set in all pages but homepage, this snippet shows the breadcrumb of the current 
 ```
 - [Google Site navigation](https://developers.google.com/search/docs/guides/enhance-site#troubleshooting_your_markup)
 
-This snippet placed in the homepage's `head` forces google to use the website search engine instead of default google search.
+This snippet placed in the homepage's `head` forces google to use the website search engine instead of default google search. The searchbox is displayed on a search results page for a brand name (ex: Pinterest or pinterest.com).
 
 ```javascript
 <script type="application/ld+json">
@@ -270,6 +270,7 @@ This snippet placed in the homepage's `head` forces google to use the website se
 }
 ```
 
+To make sure google doesn't display any searchbox, insert `<meta name="google" content="nositelinkssearchbox" />` in `head`.
 
 <a id="others"></a>
 ## Others
