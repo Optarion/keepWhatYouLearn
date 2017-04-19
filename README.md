@@ -362,6 +362,32 @@ This snippet comes in addition with NewsArticle Microformat when a video exists 
 </script>
 ```
 
+- Twitter Cards
+
+Twitter uses specific `<meta>` to build a card when an url is shared. We can use *[Summary](https://dev.twitter.com/cards/types/summary)* on every pages and *[Summary with large image](https://dev.twitter.com/cards/types/summary-large-image)* pages with nice picture.
+Validator : https://cards-dev.twitter.com/validator 
+
+```
+<!-- Twitter Card Summary -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{Twitter account}" />
+<meta name="twitter:creator" content="@{Twitter account}" />
+<meta name="twitter:domain" content="{Organization name}" />
+<meta name="twitter:title" content="{Page title}" />
+<meta name="twitter:description" content="{Page description}" />
+<meta name="twitter:image:src" content="{Main picture URL}" />
+<meta name="twitter:url" content="{Page URL}" />
+
+<!-- Twitter Card Summary with large image -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{Twitter account}">
+<meta name="twitter:creator" content="@{Twitter account}">
+<meta name="twitter:domain" content="{Organization name}" />
+<meta name="twitter:title" content="{Page title}">
+<meta name="twitter:description" content="{Page description}">
+<meta name="twitter:image" content="{Main picture URL}">
+<meta name="twitter:url" content="{Page URL}" />
+```
 
 <a id="others"></a>
 ## Others
