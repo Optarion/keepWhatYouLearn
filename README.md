@@ -285,6 +285,54 @@ More info : https://schema.org/SiteNavigationElement
 </ul>
 ```
 
+- [Microformat NewsArticle](https://developers.google.com/structured-data/rich-snippets/articles#article_markup_properties)
+
+This snippet makes Google to better understand the semantic purpose of the news/article page.
+More infos :
+https://developers.google.com/structured-data/rich-snippets/articles#article_markup_properties
+https://developers.google.com/structured-data/carousels/top-stories 
+https://developers.google.com/search/docs/data-types/articles#amp-logo-guidelines (Logo sizing)
+
+```javascript
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"{Site URL}"
+    },
+    "headline": "{Article Title}",
+    "alternativeHeadline": "{Article headline}",
+    "description": "{Article short description or first lines}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{Article main visual}",
+      "height": {Article main visual height}, // in pixels
+      "width": {Article main visual width} // in pixels
+    },
+    "datePublished": "2011-03-21T14:30:09+00:00", //W3C format
+    "dateModified": "2014-09-15T14:59:48+00:00", //W3C format
+    "keywords":["{keyword 1}","{keyword 2}",...], 
+    "articleSection":"{Parent section's name}",
+    "author": {
+      "@type": "Person",
+      "name": "{Site name}"
+     },
+     "publisher": {
+     "@type": "Organization",
+     "name": "{Site name}",
+     "logo": {
+        "@type": "ImageObject",
+        "url": "{Organisation logotype URL}",
+        "width": {Organisation logotype width}, // in pixels
+        "height": {Organisation logotype height} // in pixels
+     }
+   }
+}
+
+```
+
 <a id="others"></a>
 ## Others
 <a id="others-mysql"></a>
