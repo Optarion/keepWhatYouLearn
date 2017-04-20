@@ -36,7 +36,9 @@ A reminder of what I've learned and will surely forgot
 <a id="css-variables"></a>
 ### Custom properties
 We can use css variables as we did with Less/Sass
-More info https://codepen.io/malyw/pen/rmBZee
+More info 
+- https://codepen.io/malyw/pen/rmBZee
+- https://webkit.org/blog/5989/css-variables-in-webkit/
 
 ```css
 :root{
