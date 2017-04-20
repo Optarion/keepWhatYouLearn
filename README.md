@@ -7,6 +7,8 @@ A reminder of what I've learned and will surely forgot
 ----------------
 
 ## Summary
+* [CSS](#css)
+	* [Custom properties](#css-variables)
 * [Javascript](#javascript)
   * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
@@ -27,6 +29,40 @@ A reminder of what I've learned and will surely forgot
 * [Others](#others)
 	* [MySQL](#others-mysql)
 
+
+<a id="css"></a>
+## CSS
+
+<a id="css-variables"></a>
+### Custom properties
+We can use css variables as we did with Less/Sass
+More info https://codepen.io/malyw/pen/rmBZee
+
+```css
+:root{
+ --main-color: #4d4e53;
+ --main-bg: rgb(255, 255, 255);
+ --header-height: 68px;
+ --content-padding: 10px 20px;
+ --font-size : 16px;
+}
+
+body {
+	color : var(--main-color); // Output #4d4e53
+	font-size: var(--font-size, 20px); // 20px is used as fallback if no --font-size defined
+}
+```
+
+We ca easily read/write it with Javascript.
+
+```javascript
+// READ
+const rootStyles = getComputedStyle(document.documentElement);
+const varValue = rootStyles.getPropertyValue('--screen-category').trim();
+
+// WRITE
+document.documentElement.style.setProperty('--screen-category', value);
+```
 
 <a id="javascript"></a>
 ## Javascript
