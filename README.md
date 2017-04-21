@@ -497,7 +497,7 @@ Others favicons for apple devices
 
 It must be a permission issue
 ```
-ls -laF /usr/local/var/mysql/ /usr/local/var/mysql/ //Check the ownership of mysql folder
+ls -laF /usr/local/var/mysql/ //Check the ownership of mysql folder
 
-sudo chown -R mysql //Change owneship to mysql
+sudo chown -R mysql /usr/local/var/mysql/ //Change ownership to mysql
 ```
