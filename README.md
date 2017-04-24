@@ -115,6 +115,16 @@ document.documentElement.style.setProperty('--screen-category', value);
 </BOUCLE_current>
 ```
 
+- To display a loop only if a certain data exists, we can use a "fake" loop
+```spip
+<BOUCLE_fake(ARTICLES){0,1}>[(#ENV{data}|?{' '})]</BOUCLE_fake>
+	// BOUCLE_data only occurs if the #ENV{data} exists because sets before </B_fake>
+	<BOUCLE_data(ARTICLES){...}>
+		// Stuff to get
+	</BOUCLE_data>
+</B_fake>
+```
+
 <a id="spip-filtres"></a>
 ### Filtres
 - Use `|debug` to display information before a value compiled by spip.
