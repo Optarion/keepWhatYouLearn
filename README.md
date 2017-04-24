@@ -15,6 +15,9 @@ A reminder of what I've learned and will surely forgot
 * [SPIP](#spip)
   * [Boucles](#spip-boucles)
   * [Filtres](#spip-filtres)
+* [SQL](#sql)
+	* [Create stuff](#sql-create)
+	* [Delete stuff](#sql-delete)
 * [Git](#git)
 	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
@@ -117,8 +120,46 @@ document.documentElement.style.setProperty('--screen-category', value);
 ```
 [(#ID_ARTICLE|debug{id_article})] // Output: 'id_article' = X (where X is the ID_ARTICLE)
 ```
+<a id="sql"></a>
+## SQL
 
+<a id="sql-create"></a>
+### Create stuff
+- DataBase
 
+```sql
+CREATE DATABASE <database_name>;
+```
+
+- Table
+
+```sql
+CREATE TABLE <table_name>
+(
+<column_name> <column_type>, // Ex: id int,
+<column_name> <column_type>, // Ex: title varchar(50),
+<column_name> <column_type> // ...
+);
+```
+	
+- Column 
+
+```sql
+ALTER TABLE <table_name>
+ADD COLUMN <column_name> <column_type>
+```
+<a id="sql-delete"></a>
+### Delete stuff
+- Database/Table
+```sql
+DROP DATABASE/TABLE <database/table_name>;
+```
+
+- Column 
+```sql
+ALTER TABLE <table_name>
+REMOVE COLUMN <column_name>
+```
 
 <a id="git"></a>
 ## Git
