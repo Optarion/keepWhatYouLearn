@@ -22,6 +22,7 @@ A reminder of what I've learned and will surely forgot
 	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
 	* [Rename stuff](#git-rename)
+	* [Rebase stuff](#git-rebase)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -232,6 +233,43 @@ git reset --soft 0d1d7fc32 // Reset all commits but keep track of file modificat
 git branch -m <old-name> <new-name> //If on another branch
 git branch -m <old-name> //If on the branch to rename
 ```
+
+<a id="git-rebase"></a>
+### Rebase stuff
+- Merge commits
+
+If we want to merge multiple commits into a single one.
+```
+git rebase -i <commit-SHA> 
+
+// Ex: output
+pick 01d1124 Adding license
+pick 6340aaa Moving license into its own file
+pick ebfd367 Jekyll has become self-aware.
+pick 30e0ccb Changed the tagline in the binary, too.
+
+// Pick last commit and squash others with it then save changes
+pick 01d1124 Adding license
+squash 6340aaa Moving license into its own file
+squash ebfd367 Jekyll has become self-aware.
+squash 30e0ccb Changed the tagline in the binary, too.
+
+// Ex. output
+# This is a combination of 4 commits.
+# The first commit's message is:
+Adding license
+
+# This is the 2nd commit message:
+
+Moving license into its own file
+
+...
+
+// Delete all  commits messages and add the one you want for the commit to be created then save changes 
+// New commit:
+Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
+```
+
 <a id="tools"></a>
 ## Tools
 
