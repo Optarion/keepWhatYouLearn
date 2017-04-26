@@ -2,7 +2,8 @@
 A reminder of what I've learned and will surely forgot
 
 ## Tasks List
-- [ ] Add Markdown Infos (Regular&GitHub's ?)
+* [ ] Add Markdown Infos (Regular&GitHub's ?)
+* [ ] Add Dev tools' workspace linking information for less/sass/compiled/minified files
 
 ----------------
 
@@ -289,9 +290,17 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
-- Shortcut to open/close Chrome Dev Tools: Cmd(⌘) + Alt(⌥) + I
-- Shortcut to access parameters: Cmd(⌘) Shift(⇧) + P
-- You can see/delete page cookies in *Application/Storage/Cookies*
+* Shortcut to open/close Chrome Dev Tools: Cmd(⌘) + Alt(⌥) + I
+* Shortcut to access parameters: Cmd(⌘) + Shift(⇧) + P
+* We can see/delete page cookies in *Application/Storage/Cookies*
+* We can enable/disable Chrome foncionalities in the page `chrome://flags`
+	* We can enable Experimentals canvas feature to add more file linking tools to Chrome Dev Tools
+
+<a id="chrome-dev-tool-debugger"></a>
+#### Workspaces
+We can link local files to dev tools source files by drag&dropping a local dir into the Source panel.
+* With 'Experimentals canvas feature' activated, linking is almost automatic
+* With 'Quirk mode' activated (with Cmd(⌘) + Shift(⇧) + P), selecting an css attribute (for ex.) highlights it in the local file directly in the Quirk mode panel so we can edit it directly.
 
 <a id="chrome-dev-tool-debugger"></a>
 #### Debugger
