@@ -27,6 +27,7 @@ A reminder of what I've learned and will surely forgot
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
+    * [Workspaces](#chrome-dev-tool-workspaces)
     * [Console](#chrome-dev-tool-console)
     * [Memory Management](#chrome-dev-tool-memory)
 * [SEO](#seo)
@@ -296,7 +297,7 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 * We can enable/disable Chrome foncionalities in the page `chrome://flags`
 	* We can enable Experimentals canvas feature to add more file linking tools to Chrome Dev Tools
 
-<a id="chrome-dev-tool-debugger"></a>
+<a id="chrome-dev-tool-workspaces"></a>
 #### Workspaces
 We can link local files to dev tools source files by drag&dropping a local dir into the Source panel.
 * With 'Experimentals canvas feature' activated, linking is almost automatic
@@ -312,6 +313,7 @@ We can link local files to dev tools source files by drag&dropping a local dir i
 * In responsive mode
  * Use ⋮ icon to display more informations (rulers, network throttling...)
  * Use "Nexus 5X" to get more Screen options (with keyboards, with adress bar...)
+* We can connect an androïd device and got to "Show Remote Devices", enable port forwarding with a port number and then launch a `localhost:<port>` on the device to debug it in real time
 
 <a id="chrome-dev-tool-memory"></a>
 #### Memory Management
