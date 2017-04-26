@@ -79,10 +79,9 @@ document.documentElement.style.setProperty('--screen-category', value);
 
 <a id="javascript-console"></a>
 ### Console
-  - console.warn
-  Output a string inside the console with a warning style.
-  - console.assert
-  Output the result of a true/false test. Ex: `console.assert(1 == 1)` ouptputs `true`.
+* console.warn : Output a string inside the console with a warning style.
+* console.assert : Output the result of a true/false test. Ex: `console.assert(1 == 1)` ouptputs `true`.
+* console.table : Output data into a table
   
 <a id="javascript-garbage-collection"></a>
 ### Garbage Collection
