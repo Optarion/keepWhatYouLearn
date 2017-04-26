@@ -290,6 +290,7 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 <a id="chrome-dev-tool-miscellaneous"></a>
 #### Miscellaneous
 - Shortcut to open/close Chrome Dev Tools: Cmd(⌘) + Alt(⌥) + I
+- Shortcut to access parameters: Cmd(⌘) Shift(⇧) + P
 - You can see/delete page cookies in *Application/Storage/Cookies*
 
 <a id="chrome-dev-tool-debugger"></a>
@@ -298,7 +299,10 @@ Stuff Learned from [CodeSchool](http://discover-devtools.codeschool.com)
 * `$0` will select the last element you've inspected. `$1` highlights the second-to-last and so on.
 * `inspect($('expression'))` will inspect the element that matches 'expression'. 
 * 'Pause on Exceptions' button (rounded shape with two || inside the debugger panel) can be used to block script when an exception appears.
-* LocalStorage data can be edited inside the *Application/Storage/LocalStorage* list.
+* Local Storage data (cookies,...) can be edited inside the *Application/Storage/LocalStorage* list.
+* In responsive mode
+ * Use ⋮ icon to display more informations (rulers, network throttling...)
+ * Use "Nexus 5X" to get more Screen options (with keyboards, with adress bar...)
 
 <a id="chrome-dev-tool-memory"></a>
 #### Memory Management
