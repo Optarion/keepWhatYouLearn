@@ -2,10 +2,10 @@
 A reminder of what I've learned and will surely forgot
 
 ## Tasks List
-[ ] Add Markdown Infos (Regular&GitHub's ?)
-[ ] Add Dev tools' workspace linking information for less/sass/compiled/minified files
-[ ] Add Docker infos
-[ ] Check Service workers (App manifest/Offline management)
+- [ ] Add Markdown Infos (Regular&GitHub's ?)
+- [ ] Add Dev tools' workspace linking information for less/sass/compiled/minified files
+- [ ] Add Docker infos
+- [ ] Check Service workers (App manifest/Offline management)
 
 ----------------
 
