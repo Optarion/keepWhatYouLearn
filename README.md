@@ -32,6 +32,8 @@ A reminder of what I've learned and will surely forgot
     * [Workspaces](#chrome-dev-tool-workspaces)
     * [Console](#chrome-dev-tool-console)
     * [Memory Management](#chrome-dev-tool-memory)
+* [Accessibility](#accessibility)
+ 	* [Screen Readers](#accessibility-readers)
 * [SEO](#seo)
 	* [Microdata](#seo-microdata)
 * [Others](#others)
@@ -322,6 +324,13 @@ We can link local files to dev tools source files by drag&dropping a local dir i
 
  You can take Heap Snapshots to see every objects loaded into a page. Then you can take an other one after making some interations in the page and use "Comparison" to see difference between the two collections.
  After that, red "Detached DOM tree" show us wich html elements haven't been garbage collected (i.e. the memory used for the element is still used although the element doesn't exists anymore).
+ 
+<a href="accessibility"></a>
+## Accessibility
+
+<a href="accessibility-readers"></a>
+### Screen Readers
+On MacOS, we can use [VoiceOver](http://webaim.org/articles/voiceover/) as screen reader. 
  
  <a href="seo"></a>
  ## SEO
