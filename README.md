@@ -6,6 +6,7 @@ A reminder of what I've learned and will surely forgot
 - [ ] Add Dev tools' workspace linking information for less/sass/compiled/minified files
 - [ ] Add Docker infos
 - [ ] Check Service workers (App manifest/Offline management)
+- [ ] SPIP - Link editorial objects : Check if there is no need of other files to make it work
 
 ----------------
 
