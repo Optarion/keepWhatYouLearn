@@ -18,6 +18,7 @@ A reminder of what I've learned and will surely forgot
 * [SPIP](#spip)
   * [Boucles](#spip-boucles)
   * [Filtres](#spip-filtres)
+  * [Link editorial objects](#spip-link-objects)
 * [SQL](#sql)
 	* [Create stuff](#sql-create)
 	* [Delete stuff](#sql-delete)
@@ -136,6 +137,25 @@ document.documentElement.style.setProperty('--screen-category', value);
 ```
 [(#ID_ARTICLE|debug{id_article})] // Output: 'id_article' = X (where X is the ID_ARTICLE)
 ```
+
+<a id="spip-link-objects"></a>
+### Link editorial objects
+To link an editorial objects 'stuff' to others, we need to create a specific table named '<prefix>stuff_liens' (default prefix is 'spip_') to stock the links between the objects. 
+Then, we can displays the add/remove link bloc in the pages of the objects we want to link to 'stuff' using the `affiche_milieu` pipeline.
+
+```php
+// Display a add/remove bloc on ObjectToLinkWithStuff edition page to manage stuff links
+if (!$e['edition'] and in_array($e['type'], array('ObjectToLinkWithStuff'))) {
+	$texte .= recuperer_fond('prive/objets/editer/liens', array(
+		'table_source' => 'stuff',
+		'objet' => $e['type'],
+		'id_objet' => $flux['args'][$e['id_table_objet']]
+	));
+}
+```
+
+*NOTE: It may need some files to create to make it work perfectly (ex. objets_lies_stuff.html/php...)*
+
 <a id="sql"></a>
 ## SQL
 
