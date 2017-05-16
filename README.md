@@ -24,6 +24,7 @@ A reminder of what I've learned and will surely forgot
 	* [Create stuff](#sql-create)
 	* [Delete stuff](#sql-delete)
 * [Git](#git)
+	* [Branches](#git-branches)
 	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
 	* [Rename stuff](#git-rename)
@@ -202,6 +203,13 @@ REMOVE COLUMN <column_name>
 ## Git
 
 :warning: ALWAYS BEWARE OF `--hard` !
+
+<a id="git-branches"></a>
+### Branches
+- Checkout a remote branch with a name beginning by '#', '-'...
+```
+git checkout -b easy-name origin\#strange-name //New branch has same name but no special character and is linked to remote branch with strange name
+```
 
 <a id="git-check"></a>
 ### Check stuff
