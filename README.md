@@ -23,6 +23,8 @@ A reminder of what I've learned and will surely forgot
 * [SQL](#sql)
 	* [Create stuff](#sql-create)
 	* [Delete stuff](#sql-delete)
+* [Node.js](#node)
+	* [WTF](#node-wtf)
 * [Git](#git)
 	* [Branches](#git-branches)
 	* [Check stuff](#git-check)
@@ -198,6 +200,16 @@ DROP DATABASE/TABLE <database/table_name>;
 ALTER TABLE <table_name>
 REMOVE COLUMN <column_name>
 ```
+
+<a id="node"></a>
+## Node.js
+
+<a id="node-wtf"></a>
+### WTF
+- Scripts inside preinstall/postinstall properties are automatically executed during a `node run` before/after installing the dependencies. And for all the packages.
+
+We can prevent that with a `npm install --ignore-scripts` but it can deny good installation.
+Otherwise, check for preinstall/postinstall in all dependencies package...
 
 <a id="git"></a>
 ## Git
