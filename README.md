@@ -14,6 +14,7 @@ A reminder of what I've learned and will surely forgot
 * [CSS](#css)
 	* [Custom properties](#css-variables)
 * [Javascript](#javascript)
+	* [Accessor function](#javascript-accessor)
   * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
 * [SPIP](#spip)
@@ -70,7 +71,7 @@ body {
 }
 ```
 
-We ca easily read/write it with Javascript.
+We can easily read/write it with Javascript.
 
 ```javascript
 // READ
@@ -83,6 +84,19 @@ document.documentElement.style.setProperty('--screen-category', value);
 
 <a id="javascript"></a>
 ## Javascript
+
+<a id="javascript-accessor"></a>
+### Accessor function
+* '+' can be used to force a value to integer like parseInt. It's faster but more restrictive.
+```javascript
+var number = "123"; // typeof number == "string"
+var integer = +number; // typeof integer == "number"
+
+/!\ Becarefull
+var width = "30px";
+parseInt(width) == 30;
++width == NaN; // because "30px" is not a number as a string
+```
 
 <a id="javascript-console"></a>
 ### Console
