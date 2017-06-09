@@ -14,6 +14,7 @@ A reminder of what I've learned and will surely forgot
 * [CSS](#css)
 	* [Custom properties](#css-variables)
 * [Javascript](#javascript)
+	* [Strict mode](#javascript-strict)
 	* [Accessor function](#javascript-accessor)
   * [Debugger](#javascript-debugger)
   * [Garbage Collection](#javascript-garbage-collection)
@@ -84,6 +85,15 @@ document.documentElement.style.setProperty('--screen-category', value);
 
 <a id="javascript"></a>
 ## Javascript
+
+<a id="javascript-strict"></a>
+### Strict mode
+Javascript can silently bypass code error then bugs may happen for "no reason" and difficult to debug. Strict mode shows those silent errors. We should use it systematically. See https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Strict_mode for more infos.
+```javasrcipt
+"use strict";
+// At the begining of a file or juste before a function
+// strict & non-strict code can't be concatenate
+```
 
 <a id="javascript-accessor"></a>
 ### Accessor function
