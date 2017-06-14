@@ -14,6 +14,7 @@ A reminder of what I've learned and will surely forgot
 * [CSS](#css)
 	* [Custom properties](#css-variables)
 * [Javascript](#javascript)
+	* [Exceptions](#javascript-exceptions)
 	* [Strict mode](#javascript-strict)
 	* [Accessor function](#javascript-accessor)
   * [Debugger](#javascript-debugger)
@@ -85,6 +86,29 @@ document.documentElement.style.setProperty('--screen-category', value);
 
 <a id="javascript"></a>
 ## Javascript
+
+<a id="javascript-exceptions"></a>
+### Exceptions
+- Create "Exception objects" to redefine Exception message.
+
+```javascript
+
+function getZipcode(value){
+	if(// value is a zipcode){
+		// Do something
+	} else {
+		throw new zipCodeException(value);
+	}
+}
+
+function zipCodeException(value){
+	this.value = value;
+	this.message = " is not a valid zipcode";
+	this.toString = function() { // Redefine toString to display better information than "[Object] Object"
+		return this.value + this.message;
+	}
+}
+```
 
 <a id="javascript-strict"></a>
 ### Strict mode
