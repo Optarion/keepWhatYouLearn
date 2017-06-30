@@ -14,6 +14,8 @@ A reminder of what I've learned and will surely forgot
 * [CSS](#css)
 	* [Custom properties](#css-variables)
 	* [CurrentColor](#css-currentcolor)
+* [SVG](#svg)
+	* [Icons](#svg-icons)
 * [Javascript](#javascript)
 	* [Exceptions](#javascript-exceptions)
 	* [Strict mode](#javascript-strict)
@@ -99,8 +101,38 @@ body {
 p {
 	border-color: currentColor // Output is #444 because p's color value is inherited from body #444
 }
-
 ```
+
+----------------
+
+<a id="svg"></a>
+## SVG
+
+We should always use inline svg to allow manipulation of its elements with css (fill, transitions...)
+
+```svg
+// "0 0 20 20" for viewBox means the svg has an aspect ratio of 1:1 (square) and 1px in it is 1/20th of the svg width
+// has we set a width, we don't need to set a height because the browser knows the aspectRatio of the viewBox
+<svg viewBox="0 0 20 20" width="1rem"> 
+</svg>
+```
+
+<a id="svg-icons"></a>
+### Icons & Transitions
+
+Learn more : https://www.youtube.com/watch?v=af4ZQJ14yu8
+
+We can use svgs to replace imgs for simple icons (as arrows, hamburger menu etc.)
+
+```svg
+<svg viewBox="0 0 20 20" width="1rem">
+	<path d="M0 0 L10 10 L0 20" fill="none" stroke="black"></path> // Outputs a > 
+	<path d="M0 0 L10 10 L0 20"></path> // Outputs a ▶
+</svg>
+```
+We can then use CSS to style it or make some transitions on it.
+
+----------------
 
 <a id="javascript"></a>
 ## Javascript
@@ -173,6 +205,8 @@ parseInt(width) == 30;
 
  ```
  
+ ----------------
+ 
 <a id="spip"></a>
 ## SPIP
 
@@ -224,7 +258,9 @@ if (!$e['edition'] and in_array($e['type'], array('ObjectToLinkWithStuff'))) {
 }
 ```
 
-*NOTE: It may need some files to create to make it work perfectly (ex. objets_lies_stuff.html/php...)*
+*NOTE: It may need to create some files to make it work perfectly (ex. objets_lies_stuff.html/php...)*
+
+----------------
 
 <a id="sql"></a>
 ## SQL
@@ -267,6 +303,8 @@ ALTER TABLE <table_name>
 REMOVE COLUMN <column_name>
 ```
 
+----------------
+
 <a id="node"></a>
 ## Node.js
 
@@ -276,6 +314,8 @@ REMOVE COLUMN <column_name>
 
 We can prevent that with a `npm install --ignore-scripts` but it can deny good installation.
 Otherwise, check for preinstall/postinstall in all dependencies package...
+
+----------------
 
 <a id="git"></a>
 ## Git
@@ -392,6 +432,8 @@ Moving license into its own file
 Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
 ```
 
+----------------
+
 <a id="tools"></a>
 ## Tools
 
@@ -432,15 +474,19 @@ We can link local files to dev tools source files by drag&dropping a local dir i
  You can take Heap Snapshots to see every objects loaded into a page. Then you can take an other one after making some interations in the page and use "Comparison" to see difference between the two collections.
  After that, red "Detached DOM tree" show us wich html elements haven't been garbage collected (i.e. the memory used for the element is still used although the element doesn't exists anymore).
  
+----------------
+
 <a href="accessibility"></a>
 ## Accessibility
 
 <a href="accessibility-readers"></a>
 ### Screen Readers
 On MacOS, we can use [VoiceOver](http://webaim.org/articles/voiceover/) as screen reader. 
- 
- <a href="seo"></a>
- ## SEO
+
+----------------
+
+<a href="seo"></a>
+## SEO
 
 <a href="seo-microdata"></a>
 ### Microdata
@@ -709,6 +755,8 @@ Others favicons for apple devices
 <link rel="apple-touch-icon" sizes="167x167" href="{167x167 icon URL}">
 <link rel="apple-touch-icon" sizes="180x180" href="{180x180 icon URL}">
 ```
+
+----------------
 
 <a id="others"></a>
 ## Others
