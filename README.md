@@ -13,6 +13,7 @@ A reminder of what I've learned and will surely forgot
 ## Summary
 * [CSS](#css)
 	* [Custom properties](#css-variables)
+	* [CurrentColor](#css-currentcolor)
 * [Javascript](#javascript)
 	* [Exceptions](#javascript-exceptions)
 	* [Strict mode](#javascript-strict)
@@ -82,6 +83,23 @@ const varValue = rootStyles.getPropertyValue('--screen-category').trim();
 
 // WRITE
 document.documentElement.style.setProperty('--screen-category', value);
+```
+
+<a id="css-currentcolor"></a>
+### CurrentColor
+Learn more : https://www.youtube.com/watch?v=krbKkLPXwlQ
+
+`currentColor` can be use on a css property to make it inherit of the color of its parent.
+
+```css
+body {
+	color : #444;
+}
+
+p {
+	border-color: currentColor // Output is #444 because p's color value is inherited from body #444
+}
+
 ```
 
 <a id="javascript"></a>
