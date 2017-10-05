@@ -49,7 +49,7 @@ A reminder of what I've learned and will surely forgot
 	* [Microdata](#seo-microdata)
 * [Others](#others)
 	* [MySQL](#others-mysql)
-
+	$ [CORS](#others-cors)
 
 <a id="css"></a>
 ## CSS
@@ -770,3 +770,15 @@ ls -laF /usr/local/var/mysql/ //Check the ownership of mysql folder
 
 sudo chown -R mysql /usr/local/var/mysql/ //Change ownership to mysql
 ```
+
+<a id="others-cors"></a>
+### CORS
+You can test if a server allows CORS for a specific domain.`
+```bash
+curl -H “Origin: <domain making the request>” \
+  -H “Access-Control-Request-Method: POST” \
+  -H “Access-Control-Request-Headers: X-Requested-With” \
+  -X OPTIONS --verbose \
+  <Server url you want to test>
+```
+If the server allows the test domain it should responde with a Header `Access-Control-Allow-Origin: <domain making the request>
