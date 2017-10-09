@@ -387,6 +387,12 @@ git reset --hard 0d1d7fc32 // Reset all commits and file changes since 0d1d7fc32
 git reset --soft 0d1d7fc32 // Reset all commits but keep track of file modification. They can be committed again.
 ```
 
+- Get back a deleted branch
+Get the `<sha>` of the last commit (from `reflog` or from the deleting message)
+```
+git checkout -b <branch name> <sha> # Recreate the local branch from the last commit
+```
+
 <a id="git-rename"></a>
 ### Rename stuff
 - Rename a branch
