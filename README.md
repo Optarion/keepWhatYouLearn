@@ -37,6 +37,7 @@ A reminder of what I've learned and will surely forgot
 	* [Undo stuff](#git-reset)
 	* [Rename stuff](#git-rename)
 	* [Rebase stuff](#git-rebase)
+	* [Tag stuff](#git-tag)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -437,6 +438,10 @@ Moving license into its own file
 // New commit:
 Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
 ```
+
+<a id="git-tag"></a>
+### Tag stuff
+- NPM can manage git tagging with `npm version [patch|minor|major|...] -m "<commit message>"`. That command line will increment the package.json version, and create a commit + a tag from this new version, adding a commit message
 
 ----------------
 
