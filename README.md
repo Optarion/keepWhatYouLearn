@@ -50,7 +50,8 @@ A reminder of what I've learned and will surely forgot
 	* [Microdata](#seo-microdata)
 * [Others](#others)
 	* [MySQL](#others-mysql)
-	$ [CORS](#others-cors)
+	* [CORS](#others-cors)
+	* [MacOS](#others-macos)
 
 <a id="css"></a>
 ## CSS
@@ -793,3 +794,11 @@ curl -H “Origin: <domain making the request>” \
   <Server url you want to test>
 ```
 If the server allows the test domain it should responde with a Header `Access-Control-Allow-Origin: <domain making the request>
+
+<a id="others-macos"></a>
+### MACOS
+
+After an upgrade of MacOSX and if git and everything else doesn't work:
+```
+xcode-select --install
+```
