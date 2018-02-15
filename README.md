@@ -38,6 +38,7 @@ A reminder of what I've learned and will surely forgot
 	* [Rename stuff](#git-rename)
 	* [Rebase stuff](#git-rebase)
 	* [Tag stuff](#git-tag)
+	* [Resolve conflicts](#git-conflicts)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -444,6 +445,20 @@ Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
 ### Tag stuff
 - NPM can manage git tagging with `npm version [patch|minor|major|...] -m "<commit message>"`. That command line will increment the package.json version, and create a commit + a tag from this new version, adding a commit message
 
+<a id="git-conflicts"></a>
+### Resolve conflicts
+- In case of conflicts during a rebase, you can resolve them manually or choose to take the actual branch's modification (ours) or the branch you rebase in (theirs).
+```
+git checkout myBranch
+git rebase master
+// Output: Conflict on file xxx.js & yyy.js
+// We are now in detach HEAD
+git checkout --ours xxx.js //Resolve conflit by taking the version of xxx.js in myBranch
+git checkout --theirs yyy.js //Resolve conflit by taking the version of yyy.js in master
+git add .
+git rebase --continue
+// The rebase now continue till next conflit or end of rebase
+```
 ----------------
 
 <a id="tools"></a>
