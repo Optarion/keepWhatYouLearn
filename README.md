@@ -37,6 +37,7 @@ A reminder of what I've learned and will surely forgot
 	* [Undo stuff](#git-reset)
 	* [Rename stuff](#git-rename)
 	* [Rebase stuff](#git-rebase)
+	* [Stash stuff](#git-stash)
 	* [Tag stuff](#git-tag)
 	* [Resolve conflicts](#git-conflicts)
 * [Tools](#tools)
@@ -439,6 +440,13 @@ Moving license into its own file
 // Delete all  commits messages and add the one you want for the commit to be created then save changes 
 // New commit:
 Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
+```
+
+<a id="git-stash"></a>
+### Stash stuff
+- `git stash` will stash all modifications but you can stash specific file by using `git stash push`
+```
+git stash push -m "<stash message>" <path_to_file_to_patch> ...
 ```
 
 <a id="git-tag"></a>
