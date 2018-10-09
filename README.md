@@ -332,6 +332,10 @@ Otherwise, check for preinstall/postinstall in all dependencies package...
 ```
 git checkout -b easy-name origin\#strange-name //New branch has same name but no special character and is linked to remote branch with strange name
 ```
+- Delete all local branches that have been merged on remote
+```
+git remote prune <remote name> (i.e git remote prune origin)
+```
 
 <a id="git-check"></a>
 ### Check stuff
