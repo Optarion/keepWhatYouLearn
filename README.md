@@ -452,6 +452,21 @@ Created commit 0fc4eea: Creating license file, and making jekyll self-aware.
 ```
 git stash push -m "<stash message>" <path_to_file_to_patch> ...
 ```
+- Rename a stash by deleting it and rebuilding it from deleted stash's sha
+```
+git stash list
+stash@{0}: newest stash
+stash@{1}: oldest stash
+
+git stash drop stash@{1}
+Dropped stash@{1} (58989315ee6e16740ea05f8cb4002c548ec8ba45)
+
+git stash store -m "New stash message" 58989315ee6e16740ea05f8cb4002c548ec8ba45
+
+git stash list
+stash@{0}: New stash message <= The stash is not the oldest anymore
+stash@{1}: newest stash
+```
 
 <a id="git-tag"></a>
 ### Tag stuff
