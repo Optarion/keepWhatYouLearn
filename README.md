@@ -326,6 +326,13 @@ Otherwise, check for preinstall/postinstall in all dependencies package...
 
 :warning: ALWAYS BEWARE OF `--hard` !
 
+<a id="git-config"></a>
+### Config
+- Edit global configuration (to add author, default editor...)
+```
+git config --global -e
+```
+
 <a id="git-branches"></a>
 ### Branches
 - Checkout a remote branch with a name beginning by '#', '-'...
