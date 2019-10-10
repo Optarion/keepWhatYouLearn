@@ -52,6 +52,7 @@ A reminder of what I've learned and will surely forgot
 	* [Microdata](#seo-microdata)
 * [Others](#others)
 	* [MySQL](#others-mysql)
+	* [MongoDB](#others-mongodb)
 	* [CORS](#others-cors)
 	* [MacOS](#others-macos)
 
@@ -831,6 +832,15 @@ ls -laF /usr/local/var/mysql/ //Check the ownership of mysql folder
 
 sudo chown -R mysql /usr/local/var/mysql/ //Change ownership to mysql
 ```
+
+<a id="others-mongodb"></a>
+### MongoDB
+* Filter a collection for a key that is an array of fixed lenght
+
+```
+db.getCollection('<collectionName>').find({'the.path.of.the.array': {$size: 1}})
+```
+`1` means that we are searching all ressources that have the targeted array of length 1
 
 <a id="others-cors"></a>
 ### CORS
