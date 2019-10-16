@@ -53,6 +53,7 @@ A reminder of what I've learned and will surely forgot
 * [Others](#others)
 	* [MySQL](#others-mysql)
 	* [MongoDB](#others-mongodb)
+	* [Presto](#others-presto)
 	* [CORS](#others-cors)
 	* [MacOS](#others-macos)
 
@@ -841,6 +842,22 @@ sudo chown -R mysql /usr/local/var/mysql/ //Change ownership to mysql
 db.getCollection('<collectionName>').find({'the.path.of.the.array': {$size: 1}})
 ```
 `1` means that we are searching all ressources that have the targeted array of length 1
+
+<a id="others-presto"></a>
+### Presto
+* Install presto-cli
+```
+1/ Download executable
+wget https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.202/presto-cli-0.202-executable.jar
+2/ Find a dir in your $PATH
+echo $PATH => /Users/adrien/.nvm/versions/node/v12.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+3/ Move executable to a dir in $PATH and rename it
+mv presto-cli-0.202-executable.jar /usr/local/bin/presto
+4/ Give execution access to the file
+chmod +x presto
+
+You can now launch `presto` cmd
+```
 
 <a id="others-cors"></a>
 ### CORS
