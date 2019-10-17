@@ -859,6 +859,12 @@ chmod +x presto
 You can now launch `presto` cmd
 ```
 
+* Launch presto-cli
+```
+presto --server <host>:<port> --catalog <catalog> --user <user.name> --password
+=> you will be prompted to type your password
+```
+
 <a id="others-cors"></a>
 ### CORS
 You can test if a server allows CORS for a specific domain.`
