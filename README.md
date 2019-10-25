@@ -333,6 +333,14 @@ Otherwise, check for preinstall/postinstall in all dependencies package...
 - Edit global configuration (to add author, default editor...)
 ```
 git config --global -e
+
+Example of config:
+[user]
+# Please adapt and uncomment the following lines:
+name = <user name>
+email = <email adress>
+[core]
+editor = nano
 ```
 
 <a id="git-branches"></a>
