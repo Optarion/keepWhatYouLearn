@@ -4,7 +4,6 @@ A reminder of what I've learned and will surely forgot
 ## Tasks List
 - [ ] Add Markdown Infos (Regular&GitHub's ?)
 - [ ] Add Dev tools' workspace linking information for less/sass/compiled/minified files
-- [ ] Add Docker infos
 - [ ] Check Service workers (App manifest/Offline management)
 - [ ] SPIP - Link editorial objects : Check if there is no need of other files to make it work
 
@@ -40,6 +39,7 @@ A reminder of what I've learned and will surely forgot
 	* [Stash stuff](#git-stash)
 	* [Tag stuff](#git-tag)
 	* [Resolve conflicts](#git-conflicts)
+* [Docker](#docker)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
     * [Miscellaneous](#chrome-dev-tool-miscellaneous)
@@ -503,6 +503,19 @@ git add .
 git rebase --continue
 // The rebase now continue till next conflit or end of rebase
 ```
+
+<a id="docker"></a>
+## Docker
+
+* List all containers
+```docker ps -a```
+
+* List all local images
+```docker image ls -a```
+
+* Invoke an action on all containers at once (ex: remove all containers)
+```docker rmi $(docker ps -a)```
+
 ----------------
 
 <a id="tools"></a>
