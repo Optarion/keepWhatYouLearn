@@ -418,6 +418,15 @@ Get the `<sha>` of the last commit (from `reflog` or from the deleting message)
 git checkout -b <branch name> <sha> # Recreate the local branch from the last commit
 ```
 
+- Fixup commit
+When you have to fix a commit that is not the previous one (ex: you fixed a bug from a commit) you can create a "fixup commit" that will automaticaly been fixedup with a target commit when branch will be merged.
+```
+// There is some files modified to fix a bug (for ex)
+git commit -a --fixup <sha-of-commit-to-fix>
+
+// A "fixup" commit is now created for the targeted commit
+```
+
 <a id="git-rename"></a>
 ### Rename stuff
 - Rename a branch
