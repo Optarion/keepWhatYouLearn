@@ -38,6 +38,7 @@ A reminder of what I've learned and will surely forgot
 	* [Rebase stuff](#git-rebase)
 	* [Stash stuff](#git-stash)
 	* [Tag stuff](#git-tag)
+	* [Clean stuff](#git-clean)
 	* [Resolve conflicts](#git-conflicts)
 * [Docker](#docker)
 * [Tools](#tools)
@@ -412,10 +413,10 @@ git reset --hard 0d1d7fc32 // Reset all commits and file changes since 0d1d7fc32
 git reset --soft 0d1d7fc32 // Reset all commits but keep track of file modification. They can be committed again.
 ```
 
-- Get back a deleted branch
+- Get back to a deleted local branch not in remote
 Get the `<sha>` of the last commit (from `reflog` or from the deleting message)
 ```
-git checkout -b <branch name> <sha> # Recreate the local branch from the last commit
+git checkout -b <branch name> <sha> # Recreates the local branch from the last commit
 ```
 
 - Fixup commit
@@ -511,6 +512,13 @@ git checkout --theirs yyy.js //Resolve conflit by taking the version of yyy.js i
 git add .
 git rebase --continue
 // The rebase now continue till next conflit or end of rebase
+```
+
+<a id="git-clean"></a>
+### Clean stuff
+- Delete all local branches that does not track a remote branch
+```
+git fetch --prune
 ```
 
 <a id="docker"></a>
