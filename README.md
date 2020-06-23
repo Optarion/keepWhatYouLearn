@@ -40,6 +40,7 @@ A reminder of what I've learned and will surely forgot
 	* [Tag stuff](#git-tag)
 	* [Clean stuff](#git-clean)
 	* [Resolve conflicts](#git-conflicts)
+* [NPM](#npm)
 * [Docker](#docker)
 * [Tools](#tools)
   * [Chrome Dev Tools](#chrome-dev-tool)
@@ -532,6 +533,14 @@ git fetch --prune
 
 * Invoke an action on all containers at once (ex: remove all containers)
 ```docker rmi $(docker ps -a)```
+
+----------------
+
+<a id="npm"></a>
+## NPM
+
+* Allow global install
+```sudo chown -R $USER /usr/local/lib/node_modules```
 
 ----------------
 
