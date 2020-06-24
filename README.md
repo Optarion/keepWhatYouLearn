@@ -355,6 +355,8 @@ git checkout -b easy-name origin\#strange-name //New branch has same name but no
 ```
 git remote prune <remote name> (i.e git remote prune origin)
 ```
+- Delete remote branch
+```git push <remote name> --delete <remote-branch> (ex: git push origin --delete test-resource-in-deadletter)``` 
 
 <a id="git-check"></a>
 ### Check stuff
