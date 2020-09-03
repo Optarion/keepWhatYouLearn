@@ -53,6 +53,7 @@ A reminder of what I've learned and will surely forgot
 * [SEO](#seo)
 	* [Microdata](#seo-microdata)
 * [Others](#others)
+	* [Bash](#others-bash)
 	* [MySQL](#others-mysql)
 	* [MongoDB](#others-mongodb)
 	* [Presto](#others-presto)
@@ -872,6 +873,15 @@ Others favicons for apple devices
 
 <a id="others"></a>
 ## Others
+<a id="others-bash"></a>
+### Bash
+* Find out if a port is used by an app
+
+```lsof -n -i4TCP:<port> | grep LISTEN
+
+// Ex output:
+node      54482 adrien   26u  IPv6 0x675b71ef4914986d      0t0  TCP *:hbci (LISTEN)```
+
 <a id="others-mysql"></a>
 ### MySQL
 * Solve local problem of ".pid file not found"
