@@ -31,6 +31,7 @@ A reminder of what I've learned and will surely forgot
 * [Node.js](#node)
 	* [WTF](#node-wtf)
 * [Git](#git)
+	* [Configuration](#git-config)
 	* [Branches](#git-branches)
 	* [Check stuff](#git-check)
 	* [Undo stuff](#git-reset)
@@ -332,7 +333,7 @@ Otherwise, check for preinstall/postinstall in all dependencies package...
 :warning: ALWAYS BEWARE OF `--hard` !
 
 <a id="git-config"></a>
-### Config
+### Configuration
 - Edit global configuration (to add author, default editor...)
 ```
 git config --global -e
@@ -344,6 +345,14 @@ name = <user name>
 email = <email adress>
 [core]
 editor = nano
+```
+
+- Add a global .gitignore file
+
+```
+touch ~/.gitignore => create file
+nano ~/.gitignore => add files you want to globaly ignore
+git config --global core.excludesfile ~/.gitignore
 ```
 
 <a id="git-branches"></a>
