@@ -363,7 +363,9 @@ git checkout -b easy-name origin\#strange-name //New branch has same name but no
 ```
 - Delete all local branches that have been merged on remote
 ```
-git remote prune <remote name> (i.e git remote prune origin)
+git remote prune <remote name> //(i.e git remote prune origin)
+OR
+git branch --merged | grep -v "<the_branch_on_whom_they_have_been_merged>" //(i.e git git branch --merged | grep -v "develop") it will output the branch list then git branch -d the list
 ```
 - Delete remote branch
 ```git push <remote name> --delete <remote-branch> (ex: git push origin --delete test-resource-in-deadletter)``` 
